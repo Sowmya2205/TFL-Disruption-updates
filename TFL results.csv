@@ -1,0 +1,12 @@
+line,Status,Disruption_reason,current_timestamp
+circle,"[""Minor Delays""]","[""Circle Line: Minor delays due to a signal failure at High Street Kensington. ""]",2024-05-29T14:05:37.651+0000
+district,"[""Severe Delays"",""Part Suspended""]","[""District Line: No service between High Street Kensington - Edgware Road due to a signal failure at High Street Kensington. SEVERE DELAYS between High Street Kensington - Wimbledon and Earl's Court - Richmond / Ealing Broadway. London Underground tickets will be accepted on London Buses, C2C and South Western Railway services via reasonable routes. Good service on the rest of the line. "",""District Line: No service between High Street Kensington - Edgware Road due to a signal failure at High Street Kensington. SEVERE DELAYS between High Street Kensington - Wimbledon and Earl's Court - Richmond / Ealing Broadway. London Underground tickets will be accepted on London Buses, C2C and South Western Railway services via reasonable routes. Good service on the rest of the line. ""]",2024-05-29T14:05:37.651+0000
+victoria,"[""Minor Delays""]","[""Victoria Line: Minor delays following a late finish of engineering work in the Kings Cross area. ""]",2024-05-29T14:05:37.651+0000
+waterloo-city,"[""Good Service""]",[null],2024-05-29T14:05:37.651+0000
+hammersmith-city,"[""Good Service""]",[null],2024-05-29T14:05:37.651+0000
+metropolitan,"[""Good Service""]",[null],2024-05-29T14:05:37.651+0000
+northern,"[""Good Service""]",[null],2024-05-29T14:05:37.651+0000
+piccadilly,"[""Good Service""]",[null],2024-05-29T14:05:37.651+0000
+bakerloo,"[""Good Service""]",[null],2024-05-29T14:05:37.651+0000
+central,"[""Good Service""]",[null],2024-05-29T14:05:37.651+0000
+jubilee,"[""Good Service""]",[null],2024-05-29T14:05:37.651+0000
