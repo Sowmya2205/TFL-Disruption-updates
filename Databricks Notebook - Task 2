@@ -1,0 +1,35 @@
+#Import all required Libraries
+from pyspark.sql import SparkSession
+from pyspark.sql.types import *
+from pyspark.sql.functions import *
+import requests
+
+
+# Define the API variable
+api = "https://api.tfl.gov.uk/Line/Mode/tube/Status"
+
+# Extract data from the API
+response = requests.get(api)
+
+# Check if the request was successful or not
+if response.status_code == 200:
+    # Parse the JSON response
+    data = response.json()
+    
+    # Define the schema of the DataFrame
+    schema = StructType([
+        StructField("id", StringType(), True),
+        StructField("lineStatuses", ArrayType(StructType([
+            StructField("statusSeverityDescription", StringType(), nullable=True),
+            StructField("reason", StringType(), nullable=True)
+    ])), nullable=True)
+    ])
+        
+    df = spark.createDataFrame(data, schema=schema)
+    df1 = df.select(col("id").alias("line"),col("lineStatuses.statusSeverityDescription").alias("Status"),col("lineStatuses.reason").alias("Disruption_reason"))
+    dfts = df1.withColumn("current_timestamp", current_timestamp())
+    dfts.write.format("delta").mode("overwrite").option("mergeSchema", "true").saveAsTable("default.output1")
+    dfoutput = spark.sql("SELECT * FROM default.output1")
+    display(dfoutput)
+else:
+    print("Failue Status code:", response.status_code)
