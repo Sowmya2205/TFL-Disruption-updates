@@ -33,3 +33,12 @@ if response.status_code == 200:
     display(dfoutput)
 else:
     print("Failue Status code:", response.status_code)
+
+#In summary, this code snippet is designed to:
+Set up a Spark environment for data processing.
+Fetch data from an API that provides status information about London Underground lines.
+Convert the fetched data into a structured format using Spark DataFrames.
+Transform and enhance the data with meaningful column names and a timestamp.
+Save the processed data into a Delta table for efficient storage and querying.
+Display the processed data, and handle any errors in the API request.
+
